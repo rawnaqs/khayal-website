@@ -1,43 +1,42 @@
-# Astro Starter Kit: Minimal
+# Khayal Website
 
-```sh
-npm create astro@latest -- --template minimal
+Landing page for [Khayal](https://github.com/rawnaqs/khayal) — a local-first, privacy-focused second brain.
+
+**khayal.rawnaqs.io**
+
+## Tech Stack
+
+- [Astro](https://astro.build) — Static site generator
+- IBM Plex Mono + Bricolage Grotesque — Typography
+- Zero frameworks — Pure HTML/CSS, no JS dependencies
+
+## Structure
+
+```
+src/
+├── components/     # Page sections (Header, Hero, Features, etc.)
+├── layouts/        # Base HTML layout with fonts and meta
+├── pages/          # Routes (index.astro = homepage)
+└── styles/         # Global CSS variables and resets
+public/
+├── icon.svg        # Brand icon (also used as favicon)
+└── CNAME           # Custom domain for GitHub Pages
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Commands
 
-## 🚀 Project Structure
+| Command | Action |
+|---|---|
+| `npm run dev` | Start dev server at `localhost:4321` |
+| `npm run build` | Build to `./dist/` |
+| `npm run preview` | Preview production build locally |
 
-Inside of your Astro project, you'll see the following folders and files:
+## Deployment
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Deploys to GitHub Pages on every push to `main` via `.github/workflows/deploy.yml`.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Custom domain: `khayal.rawnaqs.io` (configured via `public/CNAME`)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## License
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+AGPLv3 — [Rawnaqs](https://github.com/rawnaqs)

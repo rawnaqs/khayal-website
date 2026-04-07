@@ -1,0 +1,247 @@
+<section class="features" id="features">
+  <div class="container">
+    <h2 class="section-label fade-in">Features</h2>
+
+    <div class="feature-row fade-in">
+      <div class="feature-text">
+        <h3 class="feature-title">Capture anything,<br />zero friction.</h3>
+        <p class="feature-desc">
+          Quick thoughts, screenshots, articles, URLs. From the terminal with <code>kl</code> or the embedded PWA. No forms, no overhead — just capture.
+        </p>
+      </div>
+      <div class="feature-visual">
+        <div class="feature-terminal">
+          <div class="ft-header">
+            <div class="ft-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+            <span class="ft-title">kl capture</span>
+          </div>
+          <div class="ft-body">
+            <div class="ft-line"><span class="ft-prompt">$</span> kl "useEffect cleanup runs after every render"</div>
+            <div class="ft-out ok">✓ saved · #react #performance · 3ms</div>
+            <div class="ft-spacer"></div>
+            <div class="ft-line"><span class="ft-prompt">$</span> kl --url https://example.com/article</div>
+            <div class="ft-out queued">⏳ queued · article · id: abc123</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse fade-in">
+      <div class="feature-text">
+        <h3 class="feature-title">Your own AI,<br />on your machine.</h3>
+        <p class="feature-desc">
+          Ollama processes every capture locally — auto-tagging, summarization, entity extraction. Your data never leaves your hardware. No API keys, no rate limits, no privacy concerns.
+        </p>
+      </div>
+      <div class="feature-visual">
+        <div class="feature-terminal">
+          <div class="ft-header">
+            <div class="ft-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+            <span class="ft-title">khayal start</span>
+          </div>
+          <div class="ft-body">
+            <div class="ft-line"><span class="ft-prompt">$</span> khayal start</div>
+            <div class="ft-out ok">✓ ollama    http://localhost:11434</div>
+            <div class="ft-out ok">✓ vault     ~/Documents/brain</div>
+            <div class="ft-out ok">✓ server    127.0.0.1:1133</div>
+            <div class="ft-out running">● khayal is running.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row fade-in">
+      <div class="feature-text">
+        <h3 class="feature-title">Find by words<br />or by meaning.</h3>
+        <p class="feature-desc">
+          Hybrid search combines FTS5 keyword matching with vector semantic search, merged with RRF. Find exact terms or discover related thoughts you forgot you had.
+        </p>
+      </div>
+      <div class="feature-visual">
+        <div class="feature-terminal">
+          <div class="ft-header">
+            <div class="ft-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+            <span class="ft-title">kl search</span>
+          </div>
+          <div class="ft-body">
+            <div class="ft-line"><span class="ft-prompt">$</span> kl search "distributed systems"</div>
+            <div class="ft-out muted">3 results · hybrid · 42ms</div>
+            <div class="ft-divider"></div>
+            <div class="ft-out result">CAP Theorem Notes <span class="ft-score">0.94</span></div>
+            <div class="ft-out muted">March 3 · [text] · #distributed #systems</div>
+            <div class="ft-out excerpt">...consistency and availability cannot both be guaranteed...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse fade-in">
+      <div class="feature-text">
+        <h3 class="feature-title">Plain markdown.<br />No lock-in.</h3>
+        <p class="feature-desc">
+          Your vault is just a folder of .md files. Works with Obsidian, git, or any editor. Khayal is a capture and retrieval layer — the files remain plain text that any tool can read.
+        </p>
+      </div>
+      <div class="feature-visual">
+        <div class="feature-terminal">
+          <div class="ft-header">
+            <div class="ft-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+            <span class="ft-title">~/Documents/brain</span>
+          </div>
+          <div class="ft-body">
+            <div class="ft-out tree"><span class="ft-folder">~/Documents/brain/</span></div>
+            <div class="ft-out tree indent"><span class="ft-folder">├── 2026-04-07/</span></div>
+            <div class="ft-out tree indent2"><span class="ft-file">│   └── my-first-thought.md</span></div>
+            <div class="ft-out tree indent"><span class="ft-folder">├── 2026-04-06/</span></div>
+            <div class="ft-out tree indent2"><span class="ft-file">│   ├── react-patterns.md</span></div>
+            <div class="ft-out tree indent2"><span class="ft-file">│   └── system-design.md</span></div>
+            <div class="ft-out tree indent"><span class="ft-folder">└── .khayal/</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 120px 32px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 80px;
+    font-weight: 500;
+  }
+
+  .feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+
+  .feature-row:last-child { margin-bottom: 0; }
+
+  .feature-row.reverse .feature-text { order: 2; }
+  .feature-row.reverse .feature-visual { order: 1; }
+
+  .feature-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .feature-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .feature-desc code {
+    background: var(--s3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--gold);
+    border: 1px solid var(--border);
+  }
+
+  .feature-terminal {
+    background: var(--s3);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .ft-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: var(--s2);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ft-dots { display: flex; gap: 6px; }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .dot-red { background: var(--bad); opacity: 0.7; }
+  .dot-yellow { background: var(--warn); opacity: 0.7; }
+  .dot-green { background: var(--ok); opacity: 0.7; }
+
+  .ft-title {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+
+  .ft-body {
+    padding: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.7;
+  }
+
+  .ft-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+  }
+
+  .ft-prompt { color: var(--gold); font-weight: 600; }
+
+  .ft-out {
+    padding-left: 20px;
+    font-size: 0.74rem;
+  }
+
+  .ft-out.ok { color: var(--ok); font-weight: 500; }
+  .ft-out.queued { color: var(--warn); font-style: italic; }
+  .ft-out.muted { color: var(--text-muted); }
+  .ft-out.running { color: var(--warn); font-weight: 500; }
+  .ft-out.result { display: flex; justify-content: space-between; color: var(--text); font-weight: 500; padding-left: 20px; }
+  .ft-out.excerpt { color: var(--text-muted); border-left: 2px solid var(--border2); padding-left: 10px; font-style: italic; }
+  .ft-out.tree { padding-left: 20px; }
+  .ft-out.tree.indent { padding-left: 36px; }
+  .ft-out.tree.indent2 { padding-left: 52px; }
+
+  .ft-score { color: var(--text-muted); margin-left: 12px; flex-shrink: 0; }
+  .ft-folder { color: var(--gold); opacity: 0.7; }
+  .ft-file { color: var(--text-muted); }
+  .ft-spacer { height: 8px; }
+  .ft-divider { height: 1px; background: var(--border); margin: 6px 0; }
+
+  @media (max-width: 900px) {
+    .feature-row {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 80px;
+    }
+    .feature-row.reverse .feature-text,
+    .feature-row.reverse .feature-visual { order: unset; }
+    .features { padding: 80px 20px; }
+    .section-label { margin-bottom: 48px; }
+  }
+</style>

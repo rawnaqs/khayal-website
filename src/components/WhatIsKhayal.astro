@@ -1,0 +1,202 @@
+<section class="what-is" id="what-is">
+  <div class="container">
+    <div class="what-is-grid">
+      <div class="what-is-text fade-in">
+        <h2 class="section-label">What is Khayal?</h2>
+        <h3 class="what-is-title">A second brain that<br />actually stays yours.</h3>
+        <p class="what-is-desc">
+          Khayal captures your thoughts, articles, and images — then processes them with your own local LLM. Everything is stored as plain markdown in a folder on your machine. No cloud. No accounts. No lock-in.
+        </p>
+        <div class="what-is-points">
+          <div class="point">
+            <span class="point-dot"></span>
+            <span class="point-text">Capture text, URLs, and images from CLI or PWA</span>
+          </div>
+          <div class="point">
+            <span class="point-dot"></span>
+            <span class="point-text">Auto-tag, summarize, and extract entities with Ollama</span>
+          </div>
+          <div class="point">
+            <span class="point-dot"></span>
+            <span class="point-text">Search with hybrid keyword + semantic search</span>
+          </div>
+          <div class="point">
+            <span class="point-dot"></span>
+            <span class="point-text">Find connections between your past thoughts</span>
+          </div>
+        </div>
+      </div>
+      <div class="what-is-visual fade-in fade-in-delay-2">
+        <div class="mini-terminal">
+          <div class="mini-header">
+            <div class="mini-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="mini-title">~ khayal</span>
+          </div>
+          <div class="mini-body">
+            <div class="mini-line">
+              <span class="mini-prompt">$</span>
+              <span class="mini-cmd">kl "useEffect cleanup runs after every render"</span>
+            </div>
+            <div class="mini-output ok">✓ saved · #react #performance · 3ms</div>
+            <div class="mini-spacer"></div>
+            <div class="mini-line">
+              <span class="mini-prompt">$</span>
+              <span class="mini-cmd">kl search "react hooks"</span>
+            </div>
+            <div class="mini-output muted">2 results · hybrid · 28ms</div>
+            <div class="mini-divider"></div>
+            <div class="mini-output result">useEffect Patterns <span class="mini-score">0.91</span></div>
+            <div class="mini-output muted">March 5 · [text] · #react #hooks</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .what-is {
+    padding: 120px 32px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .what-is-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .what-is-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+  }
+
+  .what-is-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+
+  .what-is-points {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .point {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .point-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+
+  .point-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .mini-terminal {
+    background: var(--s3);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .mini-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--s2);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mini-dots { display: flex; gap: 6px; }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .dot-red { background: var(--bad); opacity: 0.7; }
+  .dot-yellow { background: var(--warn); opacity: 0.7; }
+  .dot-green { background: var(--ok); opacity: 0.7; }
+
+  .mini-title {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+
+  .mini-body {
+    padding: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.7;
+  }
+
+  .mini-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+  }
+
+  .mini-prompt { color: var(--gold); font-weight: 600; }
+  .mini-cmd { color: var(--text); }
+
+  .mini-output {
+    padding-left: 20px;
+    font-size: 0.74rem;
+  }
+
+  .mini-output.ok { color: var(--ok); font-weight: 500; }
+  .mini-output.muted { color: var(--text-muted); }
+  .mini-output.result { display: flex; justify-content: space-between; color: var(--text); font-weight: 500; padding-left: 20px; }
+  .mini-score { color: var(--text-muted); margin-left: 8px; flex-shrink: 0; }
+  .mini-spacer { height: 8px; }
+  .mini-divider { height: 1px; background: var(--border); margin: 6px 0; }
+
+  @media (max-width: 900px) {
+    .what-is-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .what-is { padding: 80px 20px; }
+  }
+</style>

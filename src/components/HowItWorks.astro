@@ -1,0 +1,133 @@
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <h2 class="sec">How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <h3 class="step-title">Capture</h3>
+        <p class="step-desc">Text, images, URLs — from CLI or PWA. Zero friction, any device.</p>
+        <code class="step-code">kl "your thought"</code>
+      </div>
+      <div class="step-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+      <div class="step">
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </div>
+        <h3 class="step-title">Process</h3>
+        <p class="step-desc">Your local LLM tags, summarizes, and extracts entities. Instant, private.</p>
+        <code class="step-code">ollama · local · private</code>
+      </div>
+      <div class="step-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+      <div class="step">
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <h3 class="step-title">Search</h3>
+        <p class="step-desc">Hybrid keyword + semantic search. Find by exact words or meaning.</p>
+        <code class="step-code">kl search "query"</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-it-works {
+    background: var(--s2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .sec {
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--t3);
+    margin-bottom: 48px;
+  }
+
+  .steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .step {
+    flex: 1;
+    max-width: 280px;
+    text-align: center;
+    padding: 24px 16px;
+  }
+
+  .step-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: var(--glow2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--gold);
+  }
+
+  .step-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+    color: var(--t2);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .step-code {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--gold);
+  }
+
+  .step-arrow {
+    color: var(--border);
+    padding-top: 40px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .steps {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .step-arrow {
+      transform: rotate(90deg);
+      padding-top: 0;
+    }
+    .step {
+      max-width: 100%;
+    }
+  }
+</style>

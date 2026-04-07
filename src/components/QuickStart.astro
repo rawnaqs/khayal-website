@@ -1,0 +1,810 @@
+<section class="quick-start" id="quick-start">
+  <div class="container">
+    <h2 class="sec">Get started</h2>
+
+    <div class="layout">
+      <div class="terminal-col">
+        <div class="progress-bar">
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+          <span class="progress-label">4 steps · 2 minutes</span>
+        </div>
+
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">~ khayal</span>
+            <span class="terminal-badge">v1.0.0</span>
+          </div>
+          <div class="terminal-body">
+            <div class="step" data-step="1">
+              <div class="step-indicator">
+                <span class="step-num">1</span>
+                <span class="step-line"></span>
+              </div>
+              <div class="step-content">
+                <div class="cmd-line">
+                  <span class="prompt">$</span>
+                  <span class="cmd-text">brew install rawnaqs/tap/khayal</span>
+                </div>
+                <div class="cmd-output ok">
+                  <span class="status-badge ok">✓</span>
+                  khayal v1.0.0 installed
+                </div>
+              </div>
+            </div>
+
+            <div class="step" data-step="2">
+              <div class="step-indicator">
+                <span class="step-num">2</span>
+                <span class="step-line"></span>
+              </div>
+              <div class="step-content">
+                <div class="cmd-line">
+                  <span class="prompt">$</span>
+                  <span class="cmd-text">khayal init</span>
+                </div>
+                <div class="cmd-output">
+                  <span class="status-badge ok">✓</span>
+                  config: <span class="path">~/.config/khayal/config.yaml</span>
+                </div>
+                <div class="cmd-output">
+                  <span class="status-badge ok">✓</span>
+                  token: <span class="token">a3f9c2e7d1b4...</span> <span class="hint">(shown once)</span>
+                </div>
+                <div class="file-tree">
+                  <div class="tree-line"><span class="tree-icon folder">📁</span><span class="tree-folder">~/Documents/brain/</span></div>
+                  <div class="tree-line indent"><span class="tree-icon folder">📁</span><span class="tree-folder">2026-04-07/</span></div>
+                  <div class="tree-line indent2"><span class="tree-icon file">📄</span><span class="tree-file">my-first-thought.md</span></div>
+                  <div class="tree-line"><span class="tree-icon folder">📁</span><span class="tree-folder">.khayal/</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step" data-step="3">
+              <div class="step-indicator">
+                <span class="step-num">3</span>
+                <span class="step-line"></span>
+              </div>
+              <div class="step-content">
+                <div class="cmd-line">
+                  <span class="prompt">$</span>
+                  <span class="cmd-text">khayal start</span>
+                </div>
+                <div class="server-status">
+                  <div class="status-item">
+                    <span class="status-dot green"></span>
+                    <span class="status-label">ollama</span>
+                    <span class="status-value">http://localhost:11434</span>
+                  </div>
+                  <div class="status-item">
+                    <span class="status-dot green"></span>
+                    <span class="status-label">vault</span>
+                    <span class="status-value path">~/Documents/brain</span>
+                  </div>
+                  <div class="status-item">
+                    <span class="status-dot green"></span>
+                    <span class="status-label">server</span>
+                    <span class="status-value">127.0.0.1:1133</span>
+                  </div>
+                </div>
+                <div class="cmd-output running">
+                  <span class="status-badge warn">●</span>
+                  khayal is running.
+                </div>
+              </div>
+            </div>
+
+            <div class="step last" data-step="4">
+              <div class="step-indicator">
+                <span class="step-num done">4</span>
+              </div>
+              <div class="step-content">
+                <div class="cmd-line">
+                  <span class="prompt">$</span>
+                  <span class="cmd-text">kl "my first thought"</span>
+                </div>
+                <div class="cmd-output saved">
+                  <span class="status-badge ok">✓</span>
+                  saved <span class="muted">·</span> <span class="time">3ms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="whats-next">
+          <h3 class="wn-title">What's next?</h3>
+          <div class="wn-links">
+            <a href="#features" class="wn-link">
+              <span class="wn-icon">→</span>
+              Explore features
+            </a>
+            <a href="https://github.com/rawnaqs/khayal/blob/main/README.md" class="wn-link" target="_blank" rel="noopener">
+              <span class="wn-icon">→</span>
+              Read the docs
+            </a>
+            <a href="#cli" class="wn-link">
+              <span class="wn-icon">→</span>
+              CLI reference
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="install-col">
+        <h3 class="install-title">Choose your install</h3>
+
+        <div class="platform-card active" data-platform="brew">
+          <div class="platform-header">
+            <div class="platform-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <div class="platform-info">
+              <span class="platform-name">Homebrew</span>
+              <span class="platform-desc">Recommended for macOS</span>
+            </div>
+          </div>
+          <div class="platform-cmd" onclick="copyCmd(this, 'brew install rawnaqs/tap/khayal')">
+            <code>brew install rawnaqs/tap/khayal</code>
+            <span class="copy-btn">
+              <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+          </div>
+          <div class="platform-reqs">
+            <span class="req-tag">macOS</span>
+            <span class="req-tag">Linux</span>
+          </div>
+        </div>
+
+        <div class="platform-card" data-platform="docker">
+          <div class="platform-header">
+            <div class="platform-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 15.5c0-.83-.67-1.5-1.5-1.5-.5 0-.96.24-1.24.62-.84-.34-1.77-.52-2.76-.52-1.36 0-2.65.35-3.77.96C12.32 13.73 11.2 13 10 13c-2.76 0-5 2.24-5 5 0 1.63.78 3.08 2 4h10c2.76 0 5-2.24 5-5zM4.5 11c.83 0 1.5-.67 1.5-1.5S5.33 8 4.5 8 3 8.67 3 9.5 3.67 11 4.5 11zm3-3c.83 0 1.5-.67 1.5-1.5S8.33 5 7.5 5 6 5.67 6 6.5 6.67 8 7.5 8zm3-3c.83 0 1.5-.67 1.5-1.5S11.33 2 10.5 2 9 2.67 9 3.5 9.67 5 10.5 5zm3 3c.83 0 1.5-.67 1.5-1.5S14.33 5 13.5 5 12 5.67 12 6.5s.67 1.5 1.5 1.5z"/></svg>
+            </div>
+            <div class="platform-info">
+              <span class="platform-name">Docker</span>
+              <span class="platform-desc">Cross-platform, isolated</span>
+            </div>
+          </div>
+          <div class="platform-cmd" onclick="copyCmd(this, 'docker run --add-host host.docker.internal:host-gateway -v ~/Documents/brain:/vault -v ~/.config/khayal:/root/.config/khayal -p 1133:1133 ghcr.io/rawnaqs/khayal')">
+            <code>docker run \</code>
+            <code>  -v ~/Documents/brain:/vault \</code>
+            <code>  -v ~/.config/khayal:/root/.config/khayal \</code>
+            <code>  -p 1133:1133 \</code>
+            <code>  ghcr.io/rawnaqs/khayal</code>
+            <span class="copy-btn">
+              <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+          </div>
+          <div class="platform-reqs">
+            <span class="req-tag">Requires Ollama</span>
+            <span class="req-tag">All platforms</span>
+          </div>
+        </div>
+
+        <div class="platform-card" data-platform="binary">
+          <div class="platform-header">
+            <div class="platform-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </div>
+            <div class="platform-info">
+              <span class="platform-name">Binary</span>
+              <span class="platform-desc">Single file, no deps</span>
+            </div>
+          </div>
+          <div class="platform-cmd" onclick="copyCmd(this, 'curl -fsSL https://raw.githubusercontent.com/rawnaqs/khayal/main/install.sh | sh')">
+            <code>curl -fsSL https://raw.githubusercontent.com/rawnaqs/khayal/main/install.sh | sh</code>
+            <span class="copy-btn">
+              <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+          </div>
+          <div class="platform-reqs">
+            <span class="req-tag">macOS</span>
+            <span class="req-tag">Linux</span>
+            <span class="req-tag">amd64 + arm64</span>
+          </div>
+        </div>
+
+        <a href="https://github.com/rawnaqs/khayal" class="github-link" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function() {
+    window.copyCmd = function(el, text) {
+      navigator.clipboard.writeText(text).then(function() {
+        var btn = el.querySelector('.copy-btn');
+        if (btn) {
+          btn.classList.add('copied');
+          setTimeout(function() { btn.classList.remove('copied'); }, 1500);
+        }
+      });
+    };
+  })();
+</script>
+
+<style>
+  .quick-start {
+    padding: 100px 24px;
+    background: var(--s2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quick-start::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 800px;
+    background: radial-gradient(ellipse at center, rgba(201, 147, 58, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .sec {
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--t3);
+    margin-bottom: 48px;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 24px;
+    align-items: start;
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 0 4px;
+  }
+
+  .progress-track {
+    flex: 1;
+    height: 2px;
+    background: var(--border-subtle);
+    border-radius: 1px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gl));
+    border-radius: 1px;
+  }
+
+  .progress-label {
+    font-size: 0.7rem;
+    color: var(--t3);
+    white-space: nowrap;
+  }
+
+  /* Terminal card */
+  .terminal-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px rgba(201, 147, 58, 0.06),
+      0 8px 40px rgba(0, 0, 0, 0.4),
+      0 0 80px rgba(201, 147, 58, 0.06);
+  }
+
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: var(--s3);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .terminal-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .dot-red { background: var(--bad); opacity: 0.7; }
+  .dot-yellow { background: var(--warn); opacity: 0.7; }
+  .dot-green { background: var(--ok); opacity: 0.7; }
+
+  .terminal-title {
+    font-size: 0.75rem;
+    color: var(--t3);
+    font-family: var(--font-mono);
+    flex: 1;
+  }
+
+  .terminal-badge {
+    font-size: 0.65rem;
+    color: var(--gold);
+    background: var(--glow2);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-family: var(--font-mono);
+  }
+
+  .terminal-body {
+    padding: 20px;
+  }
+
+  /* Steps */
+  .step {
+    display: flex;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .step.last {
+    border-bottom: none;
+    padding-bottom: 8px;
+  }
+
+  .step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .step-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--glow2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .step-num.done {
+    background: var(--ok);
+    border-color: var(--ok);
+    color: var(--bg);
+  }
+
+  .step-line {
+    width: 1px;
+    flex: 1;
+    background: var(--border-subtle);
+    min-height: 20px;
+  }
+
+  .step-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cmd-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .prompt {
+    color: var(--gold);
+    font-weight: 600;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+  }
+
+  .cmd-text {
+    color: var(--text);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .cmd-output {
+    color: var(--t2);
+    padding-left: 20px;
+    font-size: 0.76rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 3px;
+  }
+
+  .cmd-output.saved {
+    font-size: 0.82rem;
+    padding-left: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .status-badge.ok {
+    background: rgba(61, 220, 132, 0.12);
+    color: var(--ok);
+    border: 1px solid rgba(61, 220, 132, 0.2);
+  }
+
+  .status-badge.warn {
+    background: rgba(255, 179, 64, 0.12);
+    color: var(--warn);
+    border: 1px solid rgba(255, 179, 64, 0.2);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .path { color: var(--gold); }
+  .hint { color: var(--t3); font-style: italic; }
+  .muted { color: var(--t3); }
+  .time { color: var(--ok); font-weight: 500; }
+
+  .cmd-output.ok { color: var(--ok); }
+  .cmd-output.running { color: var(--warn); font-weight: 500; }
+  .cmd-output.saved { color: var(--ok); font-weight: 600; }
+
+  .token {
+    color: var(--t2);
+    background: var(--s3);
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--border-subtle);
+    font-size: 0.72rem;
+  }
+
+  /* File tree */
+  .file-tree {
+    margin: 8px 0 0 20px;
+    padding: 10px 14px;
+    background: var(--s3);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    font-size: 0.72rem;
+    line-height: 1.8;
+  }
+
+  .tree-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--t2);
+  }
+
+  .tree-icon {
+    font-size: 0.65rem;
+    opacity: 0.6;
+  }
+
+  .tree-folder { color: var(--gold); opacity: 0.7; }
+  .tree-file { color: var(--t2); }
+
+  .indent { padding-left: 16px; }
+  .indent2 { padding-left: 32px; }
+
+  /* Server status */
+  .server-status {
+    margin: 8px 0 0 20px;
+    padding: 12px 14px;
+    background: var(--s3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  .status-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 0;
+    font-size: 0.76rem;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .status-dot.green {
+    background: var(--ok);
+    box-shadow: 0 0 6px rgba(61, 220, 132, 0.4);
+  }
+
+  .status-label {
+    color: var(--t2);
+    min-width: 48px;
+  }
+
+  .status-value {
+    color: var(--text);
+    font-size: 0.74rem;
+  }
+
+  .status-value.path { color: var(--gold); }
+
+  /* What's next */
+  .whats-next {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .wn-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--t2);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .wn-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .wn-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--gold);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .wn-link:hover { opacity: 0.8; }
+
+  .wn-icon {
+    font-size: 0.7rem;
+  }
+
+  /* Install column */
+  .install-col {
+    position: sticky;
+    top: 80px;
+  }
+
+  .install-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--t2);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+    padding-left: 4px;
+  }
+
+  .platform-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+
+  .platform-card:hover {
+    border-color: var(--border2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .platform-card.active {
+    border-color: var(--border2);
+    background: linear-gradient(135deg, var(--glow), var(--bg));
+  }
+
+  .platform-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .platform-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--glow2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .platform-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .platform-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .platform-desc {
+    font-size: 0.7rem;
+    color: var(--t3);
+  }
+
+  .platform-cmd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: var(--s3);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+  }
+
+  .platform-cmd:hover {
+    border-color: var(--border);
+    background: var(--s2);
+  }
+
+  .platform-cmd code {
+    font-size: 0.72rem;
+    color: var(--text);
+    word-break: break-all;
+    line-height: 1.5;
+  }
+
+  .copy-btn {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--glow2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--t3);
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .copy-btn .copy-icon,
+  .copy-btn .check-icon {
+    position: absolute;
+    transition: all 0.2s;
+  }
+
+  .copy-btn .check-icon {
+    opacity: 0;
+    transform: scale(0.5);
+    color: var(--ok);
+  }
+
+  .copy-btn.copied .copy-icon {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  .copy-btn.copied .check-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .platform-cmd:hover .copy-btn {
+    color: var(--gold);
+    border-color: var(--border2);
+  }
+
+  .platform-reqs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .req-tag {
+    font-size: 0.65rem;
+    color: var(--t3);
+    background: var(--s3);
+    border: 1px solid var(--border-subtle);
+    padding: 2px 8px;
+    border-radius: 100px;
+  }
+
+  .github-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--t2);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    transition: all 0.2s;
+    border: 1px solid transparent;
+  }
+
+  .github-link:hover {
+    color: var(--gold);
+    background: var(--glow);
+    border-color: var(--border);
+  }
+
+  @media (max-width: 900px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+
+    .install-col {
+      position: static;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .quick-start { padding: 60px 20px; }
+    .terminal-body { padding: 16px; }
+    .platform-cmd code { font-size: 0.68rem; }
+    .wn-links { flex-direction: column; gap: 8px; }
+  }
+</style>

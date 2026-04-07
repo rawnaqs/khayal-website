@@ -1,0 +1,158 @@
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <h2 class="sec">Roadmap</h2>
+    <div class="timeline">
+      <div class="timeline-item timeline-done">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-version">v1.0 — Core</h3>
+          <p class="timeline-desc">Text, image, URL capture. Hybrid search (FTS5 + semantic). CLI + PWA. macOS + Linux. Single binary + Docker.</p>
+          <span class="timeline-tag">shipped</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-version">v1.1 — Chunking + Connections</h3>
+          <p class="timeline-desc">Chunk-level embeddings. Entity extraction (people, amounts, dates). Proactive connections. Backup/restore.</p>
+          <span class="timeline-tag next">next</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-version">v1.2 — Deeper Intelligence</h3>
+          <p class="timeline-desc">Contradiction detection. Follow-up tracking. Ideas revisited over time. Voice notes. PDF ingestion.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-version">v1.3–v1.7 — Ecosystem</h3>
+          <p class="timeline-desc">Graph connections. Browser extension. Raycast extension. iOS Shortcuts. YouTube ingestion.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-version">v2.0+ — Platform</h3>
+          <p class="timeline-desc">Setup wizard UI. Windows support. Mobile app. Nix + NixOS distribution.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .roadmap {
+    padding: 100px 24px;
+    background: var(--s2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .sec {
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--t3);
+    margin-bottom: 48px;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+    border-radius: 1px;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 32px;
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -30px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--s2);
+  }
+
+  .timeline-done .timeline-dot {
+    background: var(--ok);
+    border-color: var(--ok);
+    box-shadow: 0 0 8px rgba(61, 220, 132, 0.3);
+  }
+
+  .timeline-content {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .timeline-content:hover {
+    border-color: var(--border2);
+    background: var(--s3);
+  }
+
+  .timeline-version {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
+  }
+
+  .timeline-desc {
+    font-size: 0.8rem;
+    color: var(--t2);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .timeline-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ok);
+    padding: 3px 10px;
+    border: 1px solid rgba(61, 220, 132, 0.2);
+    border-radius: 100px;
+    display: inline-block;
+  }
+
+  .timeline-tag.next {
+    color: var(--gold);
+    border-color: var(--border2);
+  }
+
+  @media (max-width: 768px) {
+    .roadmap { padding: 60px 20px; }
+  }
+</style>

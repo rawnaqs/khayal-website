@@ -1,0 +1,92 @@
+<section class="what-not">
+  <div class="container">
+    <h2 class="sec">What it is not</h2>
+    <div class="not-list">
+      <div class="not-item">
+        <span class="not-x">✗</span>
+        <span class="not-text">Not a SaaS, subscription, or cloud service</span>
+      </div>
+      <div class="not-item">
+        <span class="not-x">✗</span>
+        <span class="not-text">Not a chat interface over your notes</span>
+      </div>
+      <div class="not-item">
+        <span class="not-x">✗</span>
+        <span class="not-text">Not a graph database</span>
+      </div>
+      <div class="not-item">
+        <span class="not-x">✗</span>
+        <span class="not-text">Not a replacement for Obsidian — it complements it</span>
+      </div>
+    </div>
+    <p class="not-clarify">Khayal is a capture and retrieval layer on top of your existing markdown vault. It processes, indexes, and connects your thoughts — but the files remain plain .md that any tool can read.</p>
+  </div>
+</section>
+
+<style>
+  .what-not {
+    padding: 80px 24px;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .sec {
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--t3);
+    margin-bottom: 40px;
+  }
+
+  .not-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .not-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    background: var(--s2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    border-left: 3px solid var(--bad);
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .not-item:hover {
+    border-color: var(--border2);
+    background: var(--s3);
+  }
+
+  .not-x {
+    color: var(--bad);
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .not-text {
+    font-size: 0.875rem;
+    color: var(--t2);
+  }
+
+  .not-clarify {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--t2);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .what-not { padding: 60px 20px; }
+  }
+</style>

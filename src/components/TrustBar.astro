@@ -1,0 +1,88 @@
+<section class="trustbar">
+  <div class="trustbar-container">
+    <div class="trustbar-inner">
+      <div class="trust-item fade-in">
+        <span class="trust-number">100%</span>
+        <span class="trust-label">Open Source</span>
+      </div>
+      <div class="trust-divider fade-in fade-in-delay-1"></div>
+      <div class="trust-item fade-in fade-in-delay-1">
+        <span class="trust-number">Zero</span>
+        <span class="trust-label">Telemetry</span>
+      </div>
+      <div class="trust-divider fade-in fade-in-delay-2"></div>
+      <div class="trust-item fade-in fade-in-delay-2">
+        <span class="trust-number">No</span>
+        <span class="trust-label">Accounts</span>
+      </div>
+      <div class="trust-divider fade-in fade-in-delay-3"></div>
+      <div class="trust-item fade-in fade-in-delay-3">
+        <span class="trust-number">No</span>
+        <span class="trust-label">Cloud</span>
+      </div>
+      <div class="trust-divider fade-in fade-in-delay-3"></div>
+      <div class="trust-item fade-in fade-in-delay-3">
+        <span class="trust-number">Plain</span>
+        <span class="trust-label">Markdown</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .trustbar {
+    padding: 0 32px 100px;
+  }
+
+  .trustbar-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .trustbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 32px 40px;
+    background: var(--s2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .trust-number {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.5px;
+  }
+
+  .trust-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .trust-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--border2);
+  }
+
+  @media (max-width: 640px) {
+    .trustbar { padding: 0 20px 60px; }
+    .trustbar-inner { padding: 24px 20px; gap: 24px; }
+    .trust-divider { height: 28px; }
+    .trust-number { font-size: 1.2rem; }
+  }
+</style>

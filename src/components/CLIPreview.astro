@@ -1,0 +1,157 @@
+<section class="cli-section" id="cli">
+  <div class="container">
+    <h2 class="section-label fade-in">The CLI experience</h2>
+    <div class="cli-grid">
+      <div class="cli-block fade-in fade-in-delay-1">
+        <div class="cli-header">
+          <div class="cli-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+          <span class="cli-title">kl capture</span>
+        </div>
+        <div class="cli-body">
+          <div class="cli-line"><span class="cli-prompt">$</span> kl "useEffect cleanup runs after every render"</div>
+          <div class="cli-out ok">✓ saved · #react #performance · 3ms</div>
+          <div class="cli-spacer"></div>
+          <div class="cli-line"><span class="cli-prompt">$</span> kl --url https://example.com/article</div>
+          <div class="cli-out queued">⏳ queued · article · id: abc123</div>
+        </div>
+      </div>
+      <div class="cli-block fade-in fade-in-delay-2">
+        <div class="cli-header">
+          <div class="cli-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+          <span class="cli-title">kl search</span>
+        </div>
+        <div class="cli-body">
+          <div class="cli-line"><span class="cli-prompt">$</span> kl search "distributed systems"</div>
+          <div class="cli-out muted">3 results · hybrid · 42ms</div>
+          <div class="cli-divider"></div>
+          <div class="cli-out result">CAP Theorem Notes <span class="cli-score">0.94</span></div>
+          <div class="cli-out muted">March 3 · [text] · #distributed #systems</div>
+          <div class="cli-out excerpt">...consistency and availability cannot both be guaranteed...</div>
+          <div class="cli-divider"></div>
+          <div class="cli-out result">Consistency Models <span class="cli-score">0.81</span></div>
+          <div class="cli-out muted">March 5 · [text] · #distributed #databases</div>
+        </div>
+      </div>
+      <div class="cli-block fade-in fade-in-delay-3">
+        <div class="cli-header">
+          <div class="cli-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+          <span class="cli-title">khayal status</span>
+        </div>
+        <div class="cli-body">
+          <div class="cli-out muted">khayal · admin v1.0.0</div>
+          <div class="cli-divider"></div>
+          <div class="cli-out boxed">┌─ server ───────────────────┐</div>
+          <div class="cli-out boxed">│ host http://127.0.0.1:1133 │</div>
+          <div class="cli-out boxed">│ uptime 3h 24m              │</div>
+          <div class="cli-out boxed">└────────────────────────────┘</div>
+          <div class="cli-out boxed">┌─ vault ────────────────────┐</div>
+          <div class="cli-out boxed">│ notes 2,847                │</div>
+          <div class="cli-out boxed">│ indexed 2,203 (77%) ██████ │</div>
+          <div class="cli-out boxed">└────────────────────────────┘</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cli-section {
+    padding: 120px 32px;
+    background: var(--s2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 64px;
+    font-weight: 500;
+  }
+
+  .cli-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .cli-block {
+    background: var(--bg);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .cli-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: var(--s3);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cli-dots { display: flex; gap: 5px; }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .dot-red { background: var(--bad); opacity: 0.7; }
+  .dot-yellow { background: var(--warn); opacity: 0.7; }
+  .dot-green { background: var(--ok); opacity: 0.7; }
+
+  .cli-title { font-size: 0.7rem; color: var(--text-muted); }
+
+  .cli-body {
+    padding: 16px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    line-height: 1.7;
+  }
+
+  .cli-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cli-prompt { color: var(--gold); font-weight: 600; }
+
+  .cli-out {
+    padding-left: 20px;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cli-out.ok { color: var(--ok); font-weight: 500; }
+  .cli-out.queued { color: var(--warn); font-style: italic; }
+  .cli-out.muted { color: var(--text-muted); }
+  .cli-out.result { display: flex; justify-content: space-between; color: var(--text); font-weight: 500; padding-left: 20px; }
+  .cli-out.excerpt { color: var(--text-muted); border-left: 2px solid var(--border2); padding-left: 10px; font-style: italic; }
+  .cli-out.boxed { padding-left: 20px; color: var(--text); }
+  .cli-score { color: var(--text-muted); margin-left: 12px; flex-shrink: 0; }
+  .cli-spacer { height: 8px; }
+  .cli-divider { height: 1px; background: var(--border); margin: 6px 0; }
+
+  @media (max-width: 900px) {
+    .cli-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+    .cli-section { padding: 80px 20px; }
+  }
+</style>

@@ -7,20 +7,97 @@ interface Props extends HTMLAttributes<'html'> {
   description?: string;
 }
 
-const { title, description = 'Your private treasury of thought. Local, secure, yours.' } = Astro.props;
+const { title, description = 'Khayal is a local-first, privacy-focused second brain. Capture anything, search semantically, and keep your data on your machine. Open source, zero telemetry, plain markdown.' } = Astro.props;
+
+const siteUrl = 'https://khayal.rawnaqs.io';
+const ogImage = `${siteUrl}/og-image.png`;
+const twitterHandle = '@rawnaqs';
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
     <meta name="theme-color" content="#C9933A" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content="Rawnaqs" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href={siteUrl} />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/icon-512.png" sizes="512x512" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Khayal — Your private treasury of thought" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Khayal" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={siteUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Khayal — Your private treasury of thought" />
+    {twitterHandle && <meta name="twitter:site" content={twitterHandle} />}
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet" />
-    <title>{title}</title>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Khayal",
+          "description": "A local-first, privacy-focused second brain. Capture anything, search semantically, keep your data on your machine.",
+          "url": siteUrl,
+          "applicationCategory": "NoteTakingApplication",
+          "operatingSystem": "macOS, Linux",
+          "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "codeRepository": "https://github.com/rawnaqs/khayal",
+          "programmingLanguage": "Go",
+          "author": {
+            "@type": "Organization",
+            "name": "Rawnaqs",
+            "url": "https://github.com/rawnaqs"
+          },
+          "keywords": ["second brain", "local-first", "privacy", "markdown", "open source", "note taking", "knowledge management", "offline"]
+        },
+        {
+          "@type": "WebSite",
+          "name": "Khayal",
+          "url": siteUrl,
+          "description": "Your private treasury of thought.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Rawnaqs",
+            "url": "https://github.com/rawnaqs"
+          }
+        }
+      ]
+    })} />
   </head>
   <body>
     <slot />

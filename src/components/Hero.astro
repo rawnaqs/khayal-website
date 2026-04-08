@@ -42,10 +42,39 @@
     </div>
   </div>
 
+  <div class="hero-video-tilt">
+    <div class="hero-video">
+      <video autoplay loop muted playsinline style="max-width:100%;border-radius:12px;">
+        <source src="https://raw.githubusercontent.com/rawnaqs/khayal/main/charm-vhs-tape/khayal.mp4" type="video/mp4">
+        <img src="https://raw.githubusercontent.com/rawnaqs/khayal/main/charm-vhs-tape/khayal.gif" alt="Khayal demo">
+      </video>
+    </div>
+  </div>
+
 </section>
 
 <script is:inline>
   (function() {
+    var tilt = document.querySelector('.hero-video-tilt');
+    var video = document.querySelector('.hero-video');
+
+    if (tilt && video) {
+      tilt.addEventListener('mousemove', function(e) {
+        var rect = tilt.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var centerX = rect.width / 2;
+        var centerY = rect.height / 2;
+        var rotateX = (y - centerY) / centerY * -4;
+        var rotateY = (x - centerX) / centerX * 4;
+        video.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+      });
+
+      tilt.addEventListener('mouseleave', function() {
+        video.style.transform = 'rotateX(0) rotateY(0)';
+      });
+    }
+
     var cmds = {
       curl: 'curl -fsSL https://raw.githubusercontent.com/rawnaqs/khayal/main/install.sh | sh',
       brew: 'brew install rawnaqs/tap/khayal',
@@ -229,7 +258,25 @@
     gap: 12px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 80px;
+    margin-bottom: 48px;
+  }
+
+  .hero-video-tilt {
+    perspective: 1000px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .hero-video {
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out;
+  }
+
+  .hero-video video {
+    display: block;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   }
 
   .btn {
@@ -381,5 +428,6 @@
     .btn { width: 100%; max-width: 280px; justify-content: center; }
     .install-cmd code { font-size: 0.7rem; }
     .ht-body { padding: 16px; }
+    .hero-video-tilt { padding: 0 20px; }
   }
 </style>
